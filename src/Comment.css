@@ -1,0 +1,26 @@
+.comment {
+  display: flex;
+  padding: 10px 0 10px 0;
+}
+.comment_info {
+  margin-left: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  width: 100%;
+  background-color: whitesmoke;
+  outline: none;
+  border: none;
+}
+.comment_info > p {
+  font-size: 12px;
+  color: gray;
+}
+.comment_info > h2 {
+  font-size: 15px;
+}
+.comment_body {
+  font-size: 18px;
+  overflow-wrap: anywhere;
+  padding-top: 8px;
+  font-weight: 600;
+}

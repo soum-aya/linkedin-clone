@@ -21,14 +21,14 @@ function Feed() {
   useEffect(() => {
     db.collection("posts")
       .orderBy("timestamp", "desc")
-      .onSnapshot((snapshot) =>
+      .onSnapshot((snapshot) => {
         setPosts(
           snapshot.docs.map((doc) => ({
             id: doc.id,
             data: doc.data(),
           }))
-        )
-      );
+        );
+      });
   }, []);
 
   const sendPost = (e) => {
@@ -65,7 +65,7 @@ function Feed() {
       </div>
       <FlipMove>
         {posts.map(({ id, data: { name, description, message, photoUrl } }) => (
-          <Post key={id} name={name} description={description} message={message} photoUrl={photoUrl} />
+          <Post key={id} postId={id} name={name} description={description} message={message} photoUrl={photoUrl} />
         ))}
       </FlipMove>
     </div>
